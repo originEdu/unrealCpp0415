@@ -111,11 +111,12 @@ void AMyP38::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAxis(TEXT("Pitch"), this, &AMyP38::Pitch);
-	PlayerInputComponent->BindAxis(TEXT("Roll"), this, &AMyP38::Roll);
-	PlayerInputComponent->BindAction(TEXT("Fire"), EInputEvent::IE_Pressed, this, &AMyP38::Fire);
-	PlayerInputComponent->BindAction(TEXT("Boost"), EInputEvent::IE_Pressed, this, &AMyP38::Boost);
-	PlayerInputComponent->BindAction(TEXT("Boost"), EInputEvent::IE_Released, this, &AMyP38::UnBoost);
+	//블루프린트로 구현한 EnhancedInput 때문에 잠시 주석처리
+	//PlayerInputComponent->BindAxis(TEXT("Pitch"), this, &AMyP38::Pitch);
+	//PlayerInputComponent->BindAxis(TEXT("Roll"), this, &AMyP38::Roll);
+	//PlayerInputComponent->BindAction(TEXT("Fire"), EInputEvent::IE_Pressed, this, &AMyP38::Fire);
+	//PlayerInputComponent->BindAction(TEXT("Boost"), EInputEvent::IE_Pressed, this, &AMyP38::Boost);
+	//PlayerInputComponent->BindAction(TEXT("Boost"), EInputEvent::IE_Released, this, &AMyP38::UnBoost);
 }
 
 void AMyP38::Pitch(float Value)

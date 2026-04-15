@@ -79,7 +79,7 @@ public:
 	float PropellerRotationSpeed = 3600.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Speed)
 	float RotationSpeed = 60.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Speed)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Speed)
 	float BoostValue = 0.5f;
 	//플립플롭을 위한 변수
 	bool bNextFireIsLeft = true;

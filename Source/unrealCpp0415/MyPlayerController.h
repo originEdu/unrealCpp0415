@@ -15,4 +15,5 @@ class UNREALCPP0415_API AMyPlayerController : public APlayerController
 	GENERATED_BODY()
 public:
 	AMyPlayerController();
+
 };

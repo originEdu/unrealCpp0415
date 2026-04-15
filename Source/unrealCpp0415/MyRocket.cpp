@@ -23,7 +23,7 @@ AMyRocket::AMyRocket()
 	Box = CreateDefaultSubobject<UBoxComponent>(TEXT("Box"));
 	RootComponent = Box;
 	Box->SetBoxExtent(FVector(32.0f, 8.0f, 8.0f));
-
+	
 	//로켓 staticMesh 생성 후 박스 자식으로
 	Rocket = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Rocket"));
 	Rocket->SetupAttachment(Box);
