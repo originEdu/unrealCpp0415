@@ -8,6 +8,10 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 
+//파티클 필수 헤더
+#include "Particles/ParticleSystem.h"           
+#include "Particles/ParticleSystemComponent.h" 
+
 // Sets default values
 AMyRocket::AMyRocket()
 {
@@ -56,12 +60,14 @@ void AMyRocket::BeginPlay()
 void AMyRocket::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 }
 
 //BeginOverlap 후 삭제
 void AMyRocket::ProcessActorBeginOverlap(AActor* OverlappedActor, AActor* OtherActor)
 {
+	UE_LOG(LogTemp, Warning, TEXT("ProcessActorBeginOverlap 실행됨"));
+	
 	Destroy();
 }
 
